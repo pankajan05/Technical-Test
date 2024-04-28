@@ -3,7 +3,7 @@ import { PlantCardComponent } from './plant-card/plant-card.component';
 import { PlantService } from '../Services/plant.service';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-import { HeaderComponent } from '../header/header.component';
+import { HeaderComponent } from '../common/header/header.component';
 
 @Component({
   selector: 'app-plant-list',

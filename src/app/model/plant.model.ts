@@ -7,4 +7,6 @@ export interface Plant {
   description?: string;
   manager?: string;
   city?: string;
+  default_language?: string;
+  phone?: string;
 }

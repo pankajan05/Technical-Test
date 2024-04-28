@@ -4,7 +4,7 @@ import { PlantContactComponent } from './plant-contact/plant-contact.component';
 import { ActivatedRoute } from '@angular/router';
 import { PlantService } from '../Services/plant.service';
 import { Plant } from '../model/plant.model';
-import { HeaderComponent } from '../header/header.component';
+import { HeaderComponent } from '../common/header/header.component';
 
 @Component({
   selector: 'app-plant-detail',
@@ -24,8 +24,10 @@ export class PlantDetailComponent implements OnInit {
 
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get('id');
-    this.plantService.getPlantDetail(this.id).subscribe((data: any) => {
-      this.plant = data;
-    });
+    if (this.id) {
+      this.plantService.getPlantDetail(this.id).subscribe((data: any) => {
+        this.plant = data;
+      });
+    }
   }
 }
