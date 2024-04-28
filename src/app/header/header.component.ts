@@ -4,13 +4,13 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
 })
 export class HeaderComponent {
   @Input() title: string = 'Plants';
-  @Input() subtitle: string = '';
+  @Input() subtitle: string | undefined;
 
   constructor() {}
 

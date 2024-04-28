@@ -1,8 +1,13 @@
 <div class="pt-5 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
-  <app-plant-card></app-plant-card>
+  <div *ngFor="let plant of plants">
+    <app-plant-card [plant]="plant"></app-plant-card>
+  </div>
 </div>
 
+
 <div class="py-10 flex justify-center items-center">
-  <button class=" bg-gradient-to-l from-blue-500 to-blue-700 text-white font-bold py-3 px-6 rounded-s">Load More
-    Results</button>
+
+  <button class=" bg-gradient-to-l from-blue-500 to-blue-700 text-white font-bold py-3 px-6 rounded-s"
+    (click)="loadMore()">
+    Load More Results</button>
 </div>
