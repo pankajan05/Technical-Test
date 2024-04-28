@@ -1,6 +1,6 @@
 <div class="pt-5 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
   <div *ngFor="let plant of plants">
-    <app-plant-card [plant]="plant"></app-plant-card>
+    <app-plant-card [plant]="plant" (click)="navigate(plant.id)"></app-plant-card>
   </div>
 </div>
 

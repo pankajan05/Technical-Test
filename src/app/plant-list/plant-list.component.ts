@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PlantCardComponent } from './plant-card/plant-card.component';
 import { PlantService } from '../Services/plant.service';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-plant-list',
@@ -13,7 +14,7 @@ import { CommonModule } from '@angular/common';
 export class PlantListComponent implements OnInit {
   plants: any;
 
-  constructor(private plantService: PlantService) {}
+  constructor(private plantService: PlantService, private router: Router) {}
 
   ngOnInit() {
     this.plantService.getPlantDetails().subscribe((data: any) => {
@@ -25,5 +26,9 @@ export class PlantListComponent implements OnInit {
     this.plantService.loadMore().subscribe((data: any) => {
       this.plants = this.plants.concat(data.results);
     });
+  }
+
+  navigate(plantId: number) {
+    this.router.navigate(['/plants/' + plantId]);
   }
 }

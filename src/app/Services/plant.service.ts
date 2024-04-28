@@ -20,4 +20,8 @@ export class PlantService {
     this.offset += 10;
     return this.http.get(`${this.baseUrl}` + '?offset=' + this.offset);
   }
+
+  getPlantDetail(id: any): Observable<any> {
+    return this.http.get(`${this.baseUrl}/` + id + '/');
+  }
 }
