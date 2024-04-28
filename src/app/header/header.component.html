@@ -1,22 +1,25 @@
 <header class=" justify-center h-40 bg-slate-500 text-white z-10">
-  <div class="w-full py-8 px-96 flex">
-    <div *ngIf="subtitle===''">
-      <div class="p-1">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="w-4 h-4 rotate-90">
-          <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-        </svg>
+  <div class="w-full py-8 px-96"><button *ngIf="subtitle" (click)="navigate()">
+      <div class="flex">
+        <div class="p-1">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-4 h-4 rotate-90">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+          </svg>
+        </div>
+        <p class="text-normal font-bold">
+          Back to all plants</p>
       </div>
-      <p class="text-normal font-bold">
-        Back to all plants</p>
-    </div>
+    </button>
+
   </div>
+
   <div class="px-60 my-5 grid">
     <div class="bg-slate-700 ite h-24">
       <h2 class="font-bold pt-5 pl-5 text-2xl">
-        {{title}}
+        {{title ? title : 'Plants'}}
       </h2>
-      <p class="text-teal-500 pl-5" *ngIf="subtitle==''">{{subtitle}}</p>
+      <p class="text-teal-500 pl-5" *ngIf="subtitle">{{subtitle}}</p>
     </div>
   </div>
 </header>

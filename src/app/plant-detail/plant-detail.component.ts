@@ -4,11 +4,12 @@ import { PlantContactComponent } from './plant-contact/plant-contact.component';
 import { ActivatedRoute } from '@angular/router';
 import { PlantService } from '../Services/plant.service';
 import { Plant } from '../model/plant.model';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-plant-detail',
   standalone: true,
-  imports: [PlantDescriptionComponent, PlantContactComponent],
+  imports: [PlantDescriptionComponent, PlantContactComponent, HeaderComponent],
   templateUrl: './plant-detail.component.html',
   styleUrl: './plant-detail.component.css',
 })

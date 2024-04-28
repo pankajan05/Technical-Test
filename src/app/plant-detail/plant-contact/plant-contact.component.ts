@@ -9,5 +9,5 @@ import { Component, Input } from '@angular/core';
 })
 export class PlantContactComponent {
   @Input() address: string = '';
-  @Input() manager: string = '';
+  @Input() manager: string | undefined;
 }

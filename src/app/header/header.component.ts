@@ -1,5 +1,5 @@
-import { Component, Input, InputDecorator } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
+import { CommonModule, Location } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -9,10 +9,12 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.component.css',
 })
 export class HeaderComponent {
-  @Input() title: string = 'Plants';
+  @Input() title: string | undefined;
   @Input() subtitle: string | undefined;
 
-  constructor() {}
+  constructor(private location: Location) {}
 
-  ngOnInit() {}
+  navigate() {
+    this.location.back();
+  }
 }

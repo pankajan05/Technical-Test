@@ -6,4 +6,5 @@ export interface Plant {
   division: string;
   description?: string;
   manager?: string;
+  city?: string;
 }
