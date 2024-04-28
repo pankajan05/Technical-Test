@@ -14,7 +14,5 @@ export class HeaderComponent {
 
   constructor() {}
 
-  ngOnInit() {
-    console.log('HeaderComponent ngOnInit');
-  }
+  ngOnInit() {}
 }

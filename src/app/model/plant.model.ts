@@ -4,4 +4,6 @@ export interface Plant {
   address: string;
   country: string;
   division: string;
+  description?: string;
+  manager?: string;
 }

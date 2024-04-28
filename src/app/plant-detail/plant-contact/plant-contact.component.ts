@@ -8,6 +8,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './plant-contact.component.css',
 })
 export class PlantContactComponent {
-  @Input() address: any;
-  @Input() manager: any;
+  @Input() address: string = '';
+  @Input() manager: string = '';
 }

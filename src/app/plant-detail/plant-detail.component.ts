@@ -3,6 +3,7 @@ import { PlantDescriptionComponent } from './plant-description/plant-description
 import { PlantContactComponent } from './plant-contact/plant-contact.component';
 import { ActivatedRoute } from '@angular/router';
 import { PlantService } from '../Services/plant.service';
+import { Plant } from '../model/plant.model';
 
 @Component({
   selector: 'app-plant-detail',
@@ -13,7 +14,7 @@ import { PlantService } from '../Services/plant.service';
 })
 export class PlantDetailComponent implements OnInit {
   private id: any;
-  public plant: any;
+  public plant: Plant = {} as Plant;
 
   constructor(
     private route: ActivatedRoute,
