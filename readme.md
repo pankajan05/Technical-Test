@@ -1,3 +1,7 @@
+# Deployment
+
+The site is deployed in the following URL: https://pankajan05.github.io/Technical-Test/
+
 # Poka Technical Test - Frontend
 
 For this test, you'll need to display a list of plants as well as their details page using the data provided by the API.
