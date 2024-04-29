@@ -15,7 +15,7 @@ import { HeaderComponent } from '../common/header/header.component';
 export class PlantListComponent implements OnInit {
   plants: any;
 
-  constructor(private plantService: PlantService, private router: Router) {}
+  constructor(private plantService: PlantService, public router: Router) {}
 
   ngOnInit() {
     this.plantService.getPlantDetails().subscribe((data: any) => {
