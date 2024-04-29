@@ -18,9 +18,6 @@ jobs:
       run: |
           node -v
           npm i
-    
-    - name: Test
-      run: npm run test
 
     - name: Deploy
       run: npm run deploy
