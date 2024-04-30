@@ -3,9 +3,8 @@
     <h2 class="text-sm font-bold text-gray-700">{{plant.name | slice:0:16}}{{ plant.name.length > 16 ? '...' : '' }}
     </h2>
     <p class="text-gray-500 text-base text-sm">
-      Aerospace<br>
-      119 Webb View Apt. 563<br>
-      VC
+      {{plant.division}}<br>
+      {{plant.address}}
     </p>
   </div>
 </div>
