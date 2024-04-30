@@ -1,7 +1,7 @@
 <app-header></app-header>
 <div class="bg-slate-200  h-screen">
   <div class="container mx-auto pt-8">
-    <div class="pt-5 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+    <div class="pt-5 px-32 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
       <div *ngFor="let plant of plants">
         <app-plant-card [plant]="plant" (click)="navigate(plant.id)"></app-plant-card>
       </div>
